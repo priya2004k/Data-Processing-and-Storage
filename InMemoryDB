@@ -1,0 +1,36 @@
+class inMemoryDB:
+    commited_db = {} #key value storage where key = string and value = int
+    db = {}
+    transaction_open = False #keeps track of is a transaction is currently open 
+
+    def begin_transaction(self):
+        if self.transaction_is_running:
+            raise Exception("A transaction is already in progress")
+        else:
+            self.transaction_open = True
+    
+    def put(self, key, value):
+        if self.transaction_open:
+            self.db[key] = value
+        else:
+            raise Exception("A transaction is not in progress")
+
+    def get(self, key):
+        if key in self.commited_db:
+            return self.commited_db[key]
+        return None
+    
+    def commit(self):
+        if self.transaction_open:
+            self.commited_db = self.db.copy()
+            self.transaction_open = False
+        else:
+            raise Exception("A transaction is not in progress")
+
+    def rollback(self):
+        if self.transaction_open:
+            self.db = {}
+            self.transaction_open = False
+        else:
+            raise Exception("A transaction is not in progress")
+
