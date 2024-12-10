@@ -9,15 +9,12 @@ To access the code base you will need to clone it locally by running git clone h
 \
 To run the code you will edit the InMemoryDB file and write your testing code beneath the class code. You need to make an instance of the inMemoryDB class. 
 \
-\
 ex. new_db = inMemoryDB()
 \
 \
 Then you can call each of the functions of the inMemoryDB class and see the output in the command line. 
 \
-\
 ex. new_db.begin_transaction()
-\
 \
 ex. new_db.put('five', 5)
 \
