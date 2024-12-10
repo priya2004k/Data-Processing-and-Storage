@@ -1,17 +1,29 @@
 # Data-Processing-and-Storage
 
 How to Run the Code: \
-The code is written in Python so you will need to make sure you have an environment set up that is able to run Python (examples would be PyCharm or VSCode). If you do not have Python set up, you will need to install it first. You can install python from https://www.python.org/downloads/
+The code is written in Python so you will need to make sure you have an environment set up that is able to run Python (examples would be PyCharm or VSCode). If you do not have Python set up, you will need to install it first (you will need Python 3 and above). You can install python from https://www.python.org/downloads/
+\
+\
+To access the code base you will need to clone it locally by running git clone https://github.com/priya2004k/Data-Processing-and-Storage.git
+\
 \
 To run the code you will edit the InMemoryDB file and write your testing code beneath the class code. You need to make an instance of the inMemoryDB class. 
 \
+\
 ex. new_db = inMemoryDB()
+\
 \
 Then you can call each of the functions of the inMemoryDB class and see the output in the command line. 
 \
+\
 ex. new_db.begin_transaction()
 \
+\
 ex. new_db.put('five', 5)
+\
+\
+To test the code, navigate to the terminal and then run the command python InMemoryDB.py. Alternatively, you can also hit the triangular run button in the top right corner to run the file. 
+\
 \
 \
 Future Suggestions:\
